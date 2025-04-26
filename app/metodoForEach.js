@@ -1,10 +1,13 @@
 const containerBooks = document.getElementById('livros');
 
 function showBooks(bookList) {
+    containerBooks.innerHTML = '';
 
     bookList.forEach((e) => {
+      let isAvailable = e.quantidade > 0 ? 'livro_imagem' : 'livro_imagem indisponivel'
+
         containerBooks.innerHTML += `<div class="livro">
-      <img class="livro__imagens" src="${e.imagem}"
+      <img class="${isAvailable}" src="${e.imagem}"
         alt="${e.alt}" />
       <h2 class="livro__titulo">
         ${e.titulo}
@@ -15,6 +18,8 @@ function showBooks(bookList) {
         <span class="tag">${e.categoria}</span>
       </div>
     </div>`
-    })
-}
+    });
+
+};
+
 

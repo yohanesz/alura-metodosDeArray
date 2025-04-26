@@ -10,5 +10,4 @@ async function getBooksAPI() {
     showBooks(booksOnSale);
 }
 
-
 getBooksAPI();
