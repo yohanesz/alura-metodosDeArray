@@ -1,7 +1,11 @@
 const containerBooks = document.getElementById('livros');
+const totalValueElement = document.getElementById('valor_total_livros_disponiveis');
+
+
 
 function showBooks(bookList) {
     containerBooks.innerHTML = '';
+    totalValueElement.innerHTML = '';
 
     bookList.forEach((e) => {
       let isAvailable = e.quantidade > 0 ? 'livro_imagem' : 'livro_imagem indisponivel'
